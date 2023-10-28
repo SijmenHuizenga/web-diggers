@@ -8,3 +8,28 @@ html, body, #root {
     min-height: 100vh;
     max-height: 100vh;
 }
+
+.newspaper {
+    background-color: #E0C9A6;
+    padding: 12px;
+    background-image: url(/newspaper-background.jpg);
+    background-size: cover;
+}
+
+@font-face {
+    font-family: OldNewspaper;
+    src: url(/OldNewspaperTypes.ttf);
+}
+
+@font-face {
+    font-family: 'Muloka Kerash';
+    src: url("/Muloka Kerash.otf");
+}
+
+.font-title {
+    font-family: 'Muloka Kerash';
+}
+
+.font-newspaper {
+    font-family: OldNewspaper;
+}

@@ -1,11 +1,28 @@
+import { ReactNode } from "react";
 import { Piece } from "../apiclient/model";
 import ArtObject from "../components/ArtObject";
 import { Rope } from "../components/rope/Rope";
 
-const Room = ({ piece }: { piece: Piece }) => {
+export const RoomWrapper = ({
+  children,
+  style,
+}: {
+  children: ReactNode;
+  style?: any;
+}) => {
   return (
     <div
+      style={style}
       className="h-full maxh-full min-w-full border-black bg-auto bg-cover bg-center overflow-hidden"
+    >
+      {children}
+    </div>
+  );
+};
+
+const Room = ({ piece }: { piece: Piece }) => {
+  return (
+    <RoomWrapper
       style={{
         backgroundImage: "url(/art-hall-1.png)",
       }}
@@ -20,7 +37,7 @@ const Room = ({ piece }: { piece: Piece }) => {
       >
         <Rope />
       </div>
-    </div>
+    </RoomWrapper>
   );
 };
 
