@@ -367,6 +367,7 @@ function renderRope(path: string) {
       <g opacity={render.rope} className="rope">
         {segments.map((segment, i) => (
           <path
+            key={"rope" + i}
             d={`M ${segment.points.map((p) => `${p.x} ${p.y}`).join(" L ")} Z`}
             style={{
               fill: options.colors[i % options.colors.length] || "none",
@@ -375,21 +376,25 @@ function renderRope(path: string) {
         ))}
       </g>
       <g opacity={render.normals} className="normals">
-        {normals.map(
-          (line) =>
-            `<path d="M ${line[0].x} ${line[0].y} L ${line[1].x} ${line[1].y}" />`
-        )}
+        {normals.map((line, i) => (
+          <path
+            key={"normal" + i}
+            d={`M ${line[0].x} ${line[0].y} L ${line[1].x} ${line[1].y}`}
+          />
+        ))}
       </g>
       <g opacity={render.polygons} className="polygons">
-        {segments.map((segment) => (
+        {segments.map((segment, i) => (
           <path
+            key={"poly" + i}
             d={`M ${segment.path.map((p) => `${p.x} ${p.y}`).join(" L ")} Z`}
           />
         ))}
       </g>
       <g opacity={render.polygonsRounded} className="polygons-rounded">
-        {segments.map((segment) => (
+        {segments.map((segment, i) => (
           <path
+            key={"segm" + i}
             d={`M ${chaikin(segment.path, 3, true, 0.15)
               .map((p) => `${p.x} ${p.y}`)
               .join(" L ")} Z`}
@@ -397,8 +402,8 @@ function renderRope(path: string) {
         ))}
       </g>
       <g opacity={render.segments} className="segments">
-        {segments.map((segment) => (
-          <g className="segment">
+        {segments.map((segment, i) => (
+          <g className="segment" key={i + "seg"}>
             <path
               d={`M ${segment.line1.map((p) => `${p.x} ${p.y}`).join(" L ")}`}
             />
@@ -410,8 +415,8 @@ function renderRope(path: string) {
       </g>
       <path className="path" d={path} opacity={render.path} />
       <g opacity={render.points} className="points">
-        {points.map((p) => (
-          <circle cx={p.x} cy={p.y} r="3" />
+        {points.map((p, i) => (
+          <circle key={"p" + i} cx={p.x} cy={p.y} r="3" />
         ))}
       </g>
     </g>

@@ -9,7 +9,7 @@ function App() {
   const [pieces, setPieces] = useState<Piece[]>([]);
   useEffect(() => {
     loadData().then(setPieces);
-  });
+  }, []);
 
   // if (welcome) {
   //   return welcome;
