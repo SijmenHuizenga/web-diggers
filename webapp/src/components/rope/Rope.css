@@ -1,41 +1,5 @@
 $accent: #4394e5;
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  padding: 50px 20px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-
-input {
-  accent-color: $accent;
-}
-
-a,
-a:visited{
-  display: inline-block;
-  font-size: 20px;
-  line-height: 1;
-  margin: 20px 0;
-  color: black;
-  border-bottom: 1px solid #ccc;
-  outline-offset: 5px;
-  transition: all 250ms;
-  text-decoration: none;
-
-  &:hover {
-    border-bottom-color: $accent;
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
-}
-
 .demo {
   max-width: 1000px;
   margin: 0 auto;

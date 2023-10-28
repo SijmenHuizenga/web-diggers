@@ -6,7 +6,7 @@ import { loadData, loadMockData } from "./apiclient/apiclient";
 function App() {
   const [pieces, setPieces] = useState<Piece[]>([]);
   useEffect(() => {
-    loadMockData().then(setPieces);
+    loadData().then(setPieces);
   });
 
   // if (welcome) {

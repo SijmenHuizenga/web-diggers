@@ -3,6 +3,7 @@ import "./Rope.css";
 
 const POLE_WIDTH_PX = 100;
 const POLE_ATTACH_POINT_Y_PX = 70;
+const POLE_HEIGHT_PX = 363;
 
 function multiplyVector(v: { x: number; y: number }, scalar: number) {
   return {
@@ -417,25 +418,21 @@ function renderRope(path: string) {
 }
 
 export function Rope() {
-  const width = 600;
-
   let parts: { width: number; offset: number }[] = [];
   let offset = 0;
-  for (let widthToNextPole of [380, 350, 380, 400]) {
+  for (let widthToNextPole of [680, 650, 680, 800]) {
     parts.push({ offset: offset, width: widthToNextPole });
     offset = offset + widthToNextPole;
   }
 
   return (
-    <div className="demo">
-      <svg className="demo-svg" viewBox="-40 -30 580 230">
-        {...parts.map(({ offset, width }) => (
-          <>
-            {renderRope(getDemoPath(width, offset))}
-            <image href="/pole.png" x={offset} y="0" />
-          </>
-        ))}
-      </svg>
-    </div>
+    <svg className="demo-svg" viewBox={`0 0 ${offset} ${POLE_HEIGHT_PX}`}>
+      {...parts.map(({ offset, width }) => (
+        <>
+          {renderRope(getDemoPath(width, offset))}
+          <image href="/pole.png" x={offset} y="0" />
+        </>
+      ))}
+    </svg>
   );
 }
