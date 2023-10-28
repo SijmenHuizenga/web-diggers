@@ -35,6 +35,9 @@ html, body, #root {
     font-family: OldNewspaper;
 }
 
+.hide {
+    display: none;
+}
 
 
 h2.title {
@@ -48,6 +51,14 @@ h2.title {
     box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
     max-width: 400px;
     margin-top: -3em;
+}
+
+img.startmeup {
+    position: absolute;
+    border: none;
+    box-shadow: none;
+    margin-left: -25px;
+    margin-top: -25px;
 }
     
 .description {
