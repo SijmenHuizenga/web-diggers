@@ -46,10 +46,9 @@ h2.title {
 
 .image-container {
     box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-    max-width: 400px;
     margin-top: -3em;
 }
-    
+
 .description {
     margin: 0 20%;
     padding: 0.8em 1em;

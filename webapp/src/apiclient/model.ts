@@ -5,6 +5,7 @@ export type Piece = {
   year: number;
   show: boolean;
   screenshot: string;
-  embed: "Embed" | "Source" | "Fun" | "Nostalgia" | "Trending";
+  embed: string;
+  "type of embed": "IMAGE" | "IFRAME";
   updated: string;
 };
