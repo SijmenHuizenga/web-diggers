@@ -4,6 +4,7 @@ use serde_json::Value;
 use std::env::current_dir;
 use std::fs::File;
 use std::path::PathBuf;
+use csv::Reader;
 
 #[get("/")]
 async fn get_root() -> impl Responder {
@@ -17,27 +18,36 @@ async fn get_health() -> impl Responder {
 
 #[get("/json")]
 async fn get_json() -> impl Responder {
-    let file_path: PathBuf = current_dir()
-        .expect("Error while listing current directory")
-        .parent()
-        .expect("Error while navigating to the parent")
-        .join("data/web-diggers-alpha.json");
+    let file_path: PathBuf = get_data_file_path("web-diggers-alpha.json");
     let file = File::open(file_path).expect("Failed to open JSON file");
     let json_obj: Value = serde_json::from_reader(file).expect("Failed to parse JSON file");
 
-    return HttpResponse::Ok().json(json_obj);
+    HttpResponse::Ok().json(json_obj)
+}
+
+#[get("/csv")]
+async fn get_csv() -> impl Responder {
+    let file_path = get_data_file_path("web-diggers-alpha.csv");
+    let mut reader = Reader::from_path(file_path).expect("Failed to read CSV file");
+
+    for string_record in reader.records() {
+        let record = string_record.expect("Failed to read CSV file");
+        println!("Record {:?}", record);
+    }
+
+    HttpResponse::Ok().body("CSV TEST")
+    // HttpResponse::Ok().body(reader.records().collect::<Vec<_>>().as_slice())
 }
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
-
         let cors = Cors::default()
-              .allowed_origin("http://localhost:5173")
-              .allowed_methods(vec!["GET", "POST"])
-              .allowed_headers(vec![http::header::AUTHORIZATION, http::header::ACCEPT])
-              .allowed_header(http::header::CONTENT_TYPE)
-              .max_age(3600);
+            .allowed_origin("http://localhost:5173")
+            .allowed_methods(vec!["GET", "POST"])
+            .allowed_headers(vec![http::header::AUTHORIZATION, http::header::ACCEPT])
+            .allowed_header(http::header::CONTENT_TYPE)
+            .max_age(3600);
 
         App::new()
             .wrap(middleware::Logger::default())
@@ -45,8 +55,18 @@ async fn main() -> std::io::Result<()> {
             .service(get_root)
             .service(get_health)
             .service(get_json)
+            .service(get_csv)
     })
     .bind(("127.0.0.1", 8080))?
     .run()
     .await
+}
+
+fn get_data_file_path(filename: &str) -> PathBuf {
+    current_dir()
+        .expect("Error while listing current directory")
+        .parent()
+        .expect("Error while navigating to the parent")
+        .join("data")
+        .join(filename)
 }
