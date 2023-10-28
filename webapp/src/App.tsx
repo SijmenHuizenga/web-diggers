@@ -5,6 +5,7 @@ import { loadData } from "./apiclient/apiclient";
 import { ComputerUpgradesPage } from "./components/ComputerUpgrades";
 import { FleischeRaceGame } from "./components/FleischeRaceGame";
 import { useDraggable } from "react-use-draggable-scroll";
+import { HelveticaPage } from "./components/HelveticaPage";
 
 function App() {
   const ref =
@@ -29,6 +30,8 @@ function App() {
       {pieces.map((piece) => {
         if (piece.name === "Fleisch Ski Race") {
           return <FleischeRaceGame />;
+        } else if (piece.name === "Helvetica") {
+          return <HelveticaPage />;
         } else {
           return <Room key={piece.id} piece={piece} />;
         }
