@@ -426,19 +426,23 @@ function renderRope(path: string) {
 export function Rope() {
   let parts: { width: number; offset: number }[] = [];
   let offset = 0;
-  for (let widthToNextPole of [680, 650, 680, 800]) {
+  for (let widthToNextPole of [580, 850, 580]) {
     parts.push({ offset: offset, width: widthToNextPole });
     offset = offset + widthToNextPole;
   }
 
   return (
-    <svg className="demo-svg" viewBox={`0 0 ${offset} ${POLE_HEIGHT_PX}`}>
+    <svg
+      className="demo-svg"
+      viewBox={`0 0 ${offset + POLE_WIDTH_PX} ${POLE_HEIGHT_PX}`}
+    >
       {...parts.map(({ offset, width }, i) => (
         <Fragment key={i}>
           {renderRope(getDemoPath(width, offset))}
           <image href="/pole.png" x={offset} y="0" />
         </Fragment>
       ))}
+      <image href="/pole.png" x={offset} y="0" />
     </svg>
   );
 }
