@@ -1,5 +1,5 @@
 
-const Tile = () => {
+const Object = () => {
   return (
     <div className='grid h-screen place-items-center'>
       <h2>Tile</h2>
@@ -16,7 +16,7 @@ const Tile = () => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Tile;
+export default Object
