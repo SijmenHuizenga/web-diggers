@@ -1,9 +1,23 @@
-import MusicRoom from "./templates/MusicRoom";
+import { useEffect, useState } from "react";
+import Room from "./templates/Room";
+import { Piece } from "./apiclient/model";
+import { loadData, loadMockData } from "./apiclient/apiclient";
 
 function App() {
+  const [pieces, setPieces] = useState<Piece[]>([]);
+  useEffect(() => {
+    loadMockData().then(setPieces);
+  });
+
+  // if (welcome) {
+  //   return welcome;
+  // }
+
   return (
     <div className="h-screen max-h-screen overflow-y-hidden overflow-x-scroll flex">
-      <MusicRoom />
+      {pieces.map((piece) => (
+        <Room key={piece.id} piece={piece} />
+      ))}
     </div>
   );
 }
