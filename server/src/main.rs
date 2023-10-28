@@ -2,6 +2,8 @@ use actix_web::{get, middleware, App, HttpResponse, HttpServer, Responder};
 use serde_json::{Value};
 use std::{fs::File};
 
+const JSON_FILE_PATH: &str = "../../data/web-diggers-alpha.json";
+
 #[get("/")]
 async fn root_route() -> impl Responder {
     HttpResponse::Ok()
@@ -14,7 +16,7 @@ async fn get_health() -> impl Responder {
 
 #[get("/json")]
 async fn get_json() -> impl Responder {
-    let file = File::open("../../data/web-diggers-alpha.json").expect("Failed to parse JSON file");
+    let file = File::open(JSON_FILE_PATH).expect("Failed to parse JSON file");
     let json_obj: Value = serde_json::from_reader(file).expect("Failed to parse JSON file");
     return HttpResponse::Ok().json(json_obj);
 }
