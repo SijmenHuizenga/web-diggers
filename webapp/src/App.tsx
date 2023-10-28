@@ -2,13 +2,14 @@ import { ReactNode } from "react";
 import MusicRoom from "./templates/MusicRoom";
 import VideoRoom from "./templates/VideoRoom";
 import Websiteroom from "./templates/WebsiteRoom";
+import { Rope } from "./components/rope/Rope";
 
 function App() {
   return (
     <div className="h-screen max-h-screen overflow-y-hidden overflow-x-scroll flex">
-      <MusicRoom />
-      <VideoRoom />
-      <Websiteroom />
+      <Room>
+        <Rope />
+      </Room>
     </div>
   );
 }
