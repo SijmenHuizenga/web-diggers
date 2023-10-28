@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Room from "./templates/Room";
 import { Piece } from "./apiclient/model";
-import { loadData, loadMockData } from "./apiclient/apiclient";
+import { loadData } from "./apiclient/apiclient";
+// import { loadMockData } from "./apiclient/apiclient";
 
 function App() {
   const [pieces, setPieces] = useState<Piece[]>([]);
