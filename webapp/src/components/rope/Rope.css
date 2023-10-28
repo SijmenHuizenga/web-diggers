@@ -1,0 +1,112 @@
+$accent: #4394e5;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 50px 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+input {
+  accent-color: $accent;
+}
+
+a,
+a:visited{
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1;
+  margin: 20px 0;
+  color: black;
+  border-bottom: 1px solid #ccc;
+  outline-offset: 5px;
+  transition: all 250ms;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom-color: $accent;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.demo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.demo-svg {
+  overflow: visible;
+}
+
+path {
+  stroke-width: 1.5;
+}
+
+.path {
+  stroke: $accent;
+}
+
+.normals path {
+  stroke: $accent;
+}
+
+.points {
+  stroke: none;
+  fill: $accent;
+}
+
+.segment path,
+.polygons-rounded path,
+.polygons path {
+  stroke: $accent;
+}
+
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 750px;
+}
+
+.demo-controls-column {
+  flex: auto 0 0;
+  margin-right: 40px;
+}
+
+
+.demo-control {
+  display: flex;
+  margin-bottom: 10px;
+  max-width: 200px;
+  flex-wrap: wrap;
+
+  input {
+    display: block;
+    flex: 100%;
+  }
+}
+
+.demo-label {
+  display: flex;
+  margin-bottom: 10px;
+
+  input {
+    margin-right: 10px;
+  }
+}
+
+.demo-control label,
+.demo-label{
+  font-weight: bold;
+}
+
+.demo-value {
+  margin-left: 6px;
+}
