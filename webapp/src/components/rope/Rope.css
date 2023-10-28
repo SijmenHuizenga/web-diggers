@@ -1,5 +1,3 @@
-$accent: #4394e5;
-
 .demo {
   max-width: 1000px;
   margin: 0 auto;
@@ -10,27 +8,12 @@ $accent: #4394e5;
   overflow: visible;
 }
 
-path {
+.demo-svg path {
   stroke-width: 1.5;
-}
-
-.path {
-  stroke: $accent;
-}
-
-.normals path {
-  stroke: $accent;
 }
 
 .points {
   stroke: none;
-  fill: $accent;
-}
-
-.segment path,
-.polygons-rounded path,
-.polygons path {
-  stroke: $accent;
 }
 
 .demo-controls {
