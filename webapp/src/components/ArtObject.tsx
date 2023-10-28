@@ -5,31 +5,32 @@ const DEFAULT_IMG = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/O
 const ArtObject = ({ piece }: { piece: Piece }) => {
 
   // Get a screenshot or image link
-  let imageurl = 
-    piece["type of embed"] == 'IMAGE' ?
-      piece.embed
-    : piece.screenshot ? 
-      piece.screenshot.split(' (')[1].replace(')', '')
-        : DEFAULT_IMG;
+  let imageurl = null;
+  if (piece["type of embed"] == 'IMAGE') {
+    imageurl = piece.embed;
+  } else if (piece.screenshot) { 
+    imageurl = piece.screenshot.split(' (')[1].replace(')', '');
+  } else {
+    imageurl = DEFAULT_IMG;
+  }
 
   let embedurl = 
-    piece["type of embed"] == 'IFRAME' ? 
+    (piece["type of embed"] == 'IFRAME') ? 
       piece.embed : null;
 
   let youtubeurl =
-    piece["type of embed"] == 'VIDEO'
-    && piece.embed.indexOf('?v=')>1 ? 
+    (piece["type of embed"] == 'VIDEO')
+    && (piece.embed.indexOf('?v=')>1) ? 
       'https://www.youtube.com/embed/' + piece.embed.split('?v=')[1] : null;
 
   // TODO: MUSIC embedder for soundcloud / spotify / ...
 
   // Click away screenshot when embedding
-  let imagehide = (embedurl || youtubeurl) ? '' : 'width-full z-50';
-  let embedhide = imagehide ? 'hide' : '';
+  piece.imagehide = (embedurl || youtubeurl) ? '' : 'width-full z-50';
+  piece.embedhide = piece.imagehide ? 'hide' : '';
 
-const [showResults, setShowResults] = React.useState(false)
-  const showEmbed = () => {
-    this.className = 'hide'
+  let showEmbed = () => {
+    piece.imagehide = piece.embedhide = 'hide';
   }
 
   return (
@@ -38,7 +39,7 @@ const [showResults, setShowResults] = React.useState(false)
         {piece.name}
       </h2>
       <div className="image-container">
-        {embedhide &&
+        {piece.embedhide &&
           <img 
             className="startmeup" 
             src="/playback.png" 
@@ -48,7 +49,7 @@ const [showResults, setShowResults] = React.useState(false)
         }
         {imageurl &&
           <img
-            className={imagehide}
+            className={piece.imagehide}
             src={imageurl}
             alt="Image"
           />
