@@ -4,7 +4,7 @@ Web Diggers
 
 # Backend
 
-See [server§/README](server/README.md).
+See [server/README](server/README.md).
 
 # Frontend
 
