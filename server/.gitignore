@@ -1,0 +1,8 @@
+# Generated files
+/target/
+
+# misc
+.DS_Store
+
+.idea/.*
+*.iml
