@@ -1,6 +1,6 @@
 use actix_web::{get, middleware, App, HttpResponse, HttpServer, Responder};
-use csv::Reader;
 use serde_json::{Result, Value};
+use csv::Reader;
 
 #[get("/")]
 async fn root_route() -> impl Responder {
@@ -18,7 +18,7 @@ async fn json() -> impl Responder {
 }
 
 #[get("/csv")]
-async fn json() -> impl Responder {
+async fn csv() -> impl Responder {
     let mut reader = Reader::from_path("../../web-diggers-alpha.csv")?;
     let records = reader.records();
 
