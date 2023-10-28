@@ -318,12 +318,23 @@ function easing(x: number) {
     : (Math.pow(2 * x - 2, 2) * ((c2 + 1) * (x * 2 - 2) + c2) + 2) / 2;
 }
 
-function getDemoPath() {
+function getDemoPath(width: number, offset: number) {
+  const curve_x = 34;
+  const curve_y = 65;
+  const begin = {
+    x: POLE_WIDTH_PX / 2 + offset,
+    y: POLE_ATTACH_POINT_Y_PX,
+  };
+  const end = {
+    x: width + offset + POLE_WIDTH_PX / 2,
+    y: POLE_ATTACH_POINT_Y_PX,
+  };
+
   return `
-  m ${POLE_WIDTH_PX / 2} ${POLE_ATTACH_POINT_Y_PX}
-  C ${34 + POLE_WIDTH_PX / 2} ${65 + POLE_ATTACH_POINT_Y_PX} 454 ${
-    76 + POLE_ATTACH_POINT_Y_PX
-  } 500 ${POLE_ATTACH_POINT_Y_PX}`;
+  m ${begin.x} ${begin.y}
+  C ${curve_x + begin.x} ${curve_y + begin.y} ${end.x - curve_x} ${
+    curve_y + end.y
+  } ${end.x} ${end.y}`;
 }
 
 function renderRope(path: string) {
@@ -406,14 +417,24 @@ function renderRope(path: string) {
 }
 
 export function Rope() {
-  const path = getDemoPath();
+  const width = 600;
+
+  let parts: { width: number; offset: number }[] = [];
+  let offset = 0;
+  for (let widthToNextPole of [380, 350, 380, 400]) {
+    parts.push({ offset: offset, width: widthToNextPole });
+    offset = offset + widthToNextPole;
+  }
 
   return (
     <div className="demo">
       <svg className="demo-svg" viewBox="-40 -30 580 230">
-        {renderRope(path)}
-        <image href="/pole.png" x="0" y="0" />
-        <image href="/pole.png" x="450" y="0" />
+        {...parts.map(({ offset, width }) => (
+          <>
+            {renderRope(getDemoPath(width, offset))}
+            <image href="/pole.png" x={offset} y="0" />
+          </>
+        ))}
       </svg>
     </div>
   );
