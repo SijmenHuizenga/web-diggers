@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-use-draggable-scroll": "^0.4.7",
     "react-xarrows": "^2.0.2"
   },
   "devDependencies": {
