@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import "./Rope.css";
 // Thank you https://codepen.io/stanko/pen/vYaEMKX
 
@@ -427,11 +428,11 @@ export function Rope() {
 
   return (
     <svg className="demo-svg" viewBox={`0 0 ${offset} ${POLE_HEIGHT_PX}`}>
-      {...parts.map(({ offset, width }) => (
-        <>
+      {...parts.map(({ offset, width }, i) => (
+        <Fragment key={i}>
           {renderRope(getDemoPath(width, offset))}
           <image href="/pole.png" x={offset} y="0" />
-        </>
+        </Fragment>
       ))}
     </svg>
   );
