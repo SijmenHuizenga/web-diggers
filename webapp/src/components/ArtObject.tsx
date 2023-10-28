@@ -1,10 +1,10 @@
 const ArtObject = () => {
   return (
     <div className="grid h-screen place-items-center">
-      <h2>Tile</h2>
+      <h2 className='text-2xl font-bold'>Tile</h2>
       <div className="image-container">
         <img
-          className="width-full"
+          className="width-full z-50"
           src="https://source.unsplash.com/random/500x500"
           alt="placeholder"
         />
