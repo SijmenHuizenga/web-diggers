@@ -4,8 +4,6 @@ import { Piece } from "./apiclient/model";
 import { loadData } from "./apiclient/apiclient";
 import { ComputerUpgradesPage } from "./components/ComputerUpgrades";
 import { FleischeRaceGame } from "./components/FleischeRaceGame";
-// import { loadMockData } from "./apiclient/apiclient";
-// import { ComputerUpgradesPage } from "./components/ComputerUpgrades";
 
 function App() {
   const [pieces, setPieces] = useState<Piece[]>([]);
