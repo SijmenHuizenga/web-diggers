@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import MusicRoom from './templates/MusicRoom';
-import VideoRoom from './templates/VideoRoom';
-import Websiteroom from './templates/WEbsiteRoom';
+import MusicRoom from "./templates/MusicRoom";
+import VideoRoom from "./templates/VideoRoom";
+import Websiteroom from "./templates/WebsiteRoom";
 
 function App() {
   return (
