@@ -1,4 +1,6 @@
 use actix_web::{get, middleware, App, HttpResponse, HttpServer, Responder};
+use csv::Reader;
+use serde_json::{Result, Value};
 
 #[get("/")]
 async fn root_route() -> impl Responder {
@@ -13,6 +15,19 @@ async fn health() -> impl Responder {
 #[get("/json")]
 async fn json() -> impl Responder {
     HttpResponse::Ok().json("{name: Luke, surname: Skywalker}")
+}
+
+#[get("/csv")]
+async fn json() -> impl Responder {
+    let mut reader = Reader::from_path("../../web-diggers-alpha.csv")?;
+    let records = reader.records();
+
+    for record in records {
+        // Convert each row into a JSON object
+        let json_record = serde_json::to_value(record)?;
+        println!("{}", json_record);
+    }
+    HttpResponse::Ok().body("Hello world")
 }
 
 #[actix_web::main]
