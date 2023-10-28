@@ -1,23 +1,16 @@
 import { ReactNode } from "react";
+import MusicRoom from './templates/MusicRoom';
+import VideoRoom from './templates/VideoRoom';
+import Websiteroom from './templates/WEbsiteRoom';
 
 function App() {
   return (
     <div className="h-screen max-h-screen overflow-y-hidden overflow-x-scroll flex">
       <MusicRoom />
       <VideoRoom />
-      <WebsiteRoom />
+      <Websiteroom />
     </div>
   );
-}
-
-function MusicRoom() {
-  return <Room>I am a music room</Room>;
-}
-function VideoRoom() {
-  return <Room>VideoRoom</Room>;
-}
-function WebsiteRoom() {
-  return <Room>WebsiteRoom</Room>;
 }
 
 function Room({ children }: { children: ReactNode }) {
