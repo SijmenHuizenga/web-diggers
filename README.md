@@ -4,14 +4,7 @@ Web Diggers
 
 # Backend
 
-`cargo build`
-
-then
-
-`cargo run`
-
-:-)
-
+See [server§/README](server/README.md).
 
 # Frontend
 
