@@ -1,6 +1,8 @@
 How to contribute to Basel 2000
 ---
 
+Use the [Baserow Form](https://baserow.schoolofdata.ch/form/pN2aVkAwBPcJb_ledBvLOWX7ueNDvWBCFlHLtV4gzrU) to share material with our project.
+
 # Tips on finding material
 
 Parts of this were borrowed from [WikiHow](https://www.wikihow.com/Do-Internet-Research) and elsewhere.
