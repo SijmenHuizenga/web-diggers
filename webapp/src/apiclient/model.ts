@@ -3,9 +3,10 @@ export type Piece = {
   name: string;
   context: string;
   year: number;
-  show: boolean;
+  hide: boolean;
   screenshot: string;
   embed: string;
-  "type of embed": "IMAGE" | "IFRAME";
+  "type of embed": "IMAGE" | "IFRAME" | "VIDEO" | "MUSIC" | "";
   updated: string;
+  playing: boolean;
 };

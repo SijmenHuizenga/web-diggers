@@ -3,7 +3,6 @@ import { Piece } from "../apiclient/model";
 const DEFAULT_IMG = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Optical_Toy%2C_Phenakistiscope_Disc_with_Cats_and_Donkey%2C_ca._1830.gif/640px-Optical_Toy%2C_Phenakistiscope_Disc_with_Cats_and_Donkey%2C_ca._1830.gif';
 
 const ArtObject = ({ piece }: { piece: Piece }) => {
-
   // Get a screenshot or image link
   let imageurl = null;
   if (piece["type of embed"] == 'IMAGE') {
@@ -26,12 +25,7 @@ const ArtObject = ({ piece }: { piece: Piece }) => {
   // TODO: MUSIC embedder for soundcloud / spotify / ...
 
   // Click away screenshot when embedding
-  piece.imagehide = (embedurl || youtubeurl) ? '' : 'width-full z-50';
-  piece.embedhide = piece.imagehide ? 'hide' : '';
-
-  let showEmbed = () => {
-    piece.imagehide = piece.embedhide = 'hide';
-  }
+  let imagehide = (embedurl || youtubeurl);
 
   return (
     <div className="grid h-screen place-items-center">
@@ -39,26 +33,28 @@ const ArtObject = ({ piece }: { piece: Piece }) => {
         {piece.name}
       </h2>
       <div className="image-container">
-        {piece.embedhide &&
+        {imagehide &&
           <img 
             className="startmeup" 
             src="/playback.png" 
-            title="Click to open interactively" 
-            onClick={showEmbed}
+            title="Click to open" 
+            onClick={() => {piece.playing = !piece.playing}}
+            style={{visibility: piece.playing ? 'visible' : 'hidden'}}
           />
         }
         {imageurl &&
           <img
-            className={piece.imagehide}
+            className="width-full z-50"
+            style={{visibility: piece.playing ? 'visible' : 'hidden'}}
             src={imageurl}
             alt="Image"
           />
         }
-        {embedurl &&
-          <iframe src={embedurl} className={embedhide} allowFullScreen></iframe>
+        {embedurl && !piece.playing &&
+          <iframe src={embedurl} allowFullScreen scrolling="no"></iframe>
         }
-        {youtubeurl &&
-          <iframe src={embedurl} className={embedhide} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {youtubeurl && !piece.playing &&
+          <iframe src={youtubeurl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         }
       </div>
       <div className="description">
