@@ -1,6 +1,6 @@
 use actix_web::{get, middleware, App, HttpResponse, HttpServer, Responder};
-use std::{error::Error, io, process};
-use csv::Reader;
+use serde_json::{Value};
+use std::{fs::File};
 
 #[get("/")]
 async fn root_route() -> impl Responder {
@@ -14,26 +14,10 @@ async fn get_health() -> impl Responder {
 
 #[get("/json")]
 async fn get_json() -> impl Responder {
-    HttpResponse::Ok().json("{name: Luke, surname: Skywalker}")
+    let file = File::open("../../data/web-diggers-alpha.json").expect("Failed to parse JSON file");
+    let json_obj: Value = serde_json::from_reader(file).expect("Failed to parse JSON file");
+    return HttpResponse::Ok().json(json_obj);
 }
-
-/*
-fn csv_to_json(filename:&str) -> Result<(), Box<dyn Error>> {
-    // Build the CSV reader and iterate over each record.
-    println!("hello hello....");
-    let mut rdr = Reader::from_path(filename);
-    for r in rdr.deserialize() {
-        // The iterator yields Result<StringRecord, Error>, so we check the
-        // error here.
-        let record: Record = r?;
-        println!("{:?}", record);
-
-        //let json_record = serde_json::to_value(result)?;
-        //println!("{}", json_record[0]);
-    }
-    Ok(())
-}
-*/
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -43,7 +27,6 @@ async fn main() -> std::io::Result<()> {
             .service(root_route)
             .service(get_health)
             .service(get_json)
-           // .service(get_csv)
     })
     .bind(("127.0.0.1", 8080))?
     .run()
