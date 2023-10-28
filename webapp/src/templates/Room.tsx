@@ -25,7 +25,6 @@ const Room = ({ piece }: { piece: Piece }) => {
     <RoomWrapper
       style={{
         backgroundImage: "url(/art-hall-1.jpg)",
-        position: "relative",
       }}
     >
       <ArtObject piece={piece} />

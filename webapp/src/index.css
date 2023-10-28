@@ -27,6 +27,11 @@ html, body, #root {
     src: url("/Muloka Kerash.otf");
 }
 
+@font-face {
+    font-family: Helvetica;
+    src: url("/Helvetica Roman.ttf");
+}
+
 .font-title {
     font-family: 'Muloka Kerash';
 }
