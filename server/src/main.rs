@@ -21,8 +21,8 @@ async fn get_json() -> impl Responder {
         .parent()
         .expect("Error while navigating to the parent")
         .join("data/web-diggers-alpha.json");
-    let file = File::open(file_path).unwrap_or_else("Failed to open JSON file");
-    let json_obj: Value = serde_json::from_reader(file).unwrap_or_else("Failed to parse JSON file");
+    let file = File::open(file_path).expect("Failed to open JSON file");
+    let json_obj: Value = serde_json::from_reader(file).expect("Failed to parse JSON file");
 
     return HttpResponse::Ok().json(json_obj);
 }
