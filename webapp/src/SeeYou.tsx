@@ -45,7 +45,7 @@ export function SeeYou() {
           &nbsp;
           <a className="font-bold" href="https://benjaminsteidl.com/">Benjamin Steidl</a>
         </p>
-        <p><br/><tt>PRESS ENTER TO RESTART</tt></p>
+        <p className="font-monospace"><br/>PRESS ENTER TO RESTART</p>
         </div>
       </div>
     </div>

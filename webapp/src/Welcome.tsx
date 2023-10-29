@@ -1,4 +1,6 @@
-export function WelcomePage({ onMuseumEnter }: { onMuseumEnter: () => void }) {
+export function WelcomePage(
+  { onMuseumEnter }: { onMuseumEnter: () => void }
+  ) {
   return (
     <div
       className="h-full maxh-full min-w-full border-black bg-cover bg-center flex"
@@ -23,11 +25,11 @@ export function WelcomePage({ onMuseumEnter }: { onMuseumEnter: () => void }) {
             onClick={onMuseumEnter}
             className="border bg-gray-500 hover:bg-gray-600 text-white p-7 text-2xl"
           >
-             🎟️ Enter the Museum
+             🎟️ Enter Museum
           </button>
           <a
             href="https://baserow.schoolofdata.ch/form/pN2aVkAwBPcJb_ledBvLOWX7ueNDvWBCFlHLtV4gzrU"
-            className="border p-7 text-2xl"
+            className="border bg-gray-100 hover:bg-gray-200 p-7 text-2xl"
           >
              🗣️ Share a memory
           </a>

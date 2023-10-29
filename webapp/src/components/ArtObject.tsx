@@ -7,6 +7,11 @@ const DEFAULT_IMG =
 const ArtObject = ({ piece }: { piece: Piece }) => {
   const [playing, setPlaying] = useState(false);
 
+  const onMuseumExit = () => {
+    let w = document.getElementById('root').children[0]
+    w.scrollTo(w.scrollWidth, 0)
+  }
+
   // Get a screenshot or image link
   let imageurl = null;
   if (piece["type of embed"] == "IMAGE") {
@@ -79,6 +84,13 @@ const ArtObject = ({ piece }: { piece: Piece }) => {
           {piece.source && (
             <a className="button info" href={piece.source} target="_blank">👓 Read more</a>
           )}
+          <a
+            href="#"
+            onClick={onMuseumExit}
+            className="button exit"
+          >
+           🚪 Exit
+          </a>
         </p>
       </div>
     </div>
