@@ -2,17 +2,20 @@
 export function SeeYou() {
   return (
     <div
-      className="h-full maxh-full min-w-full border-black bg-cover bg-center flex"
+      className="h-full maxh-full min-w-full border-black bg-cover bg-center flex relative"
       style={{
         backgroundImage: "url('/basel-map-grayscale.jpg')",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <div className="bg-white p-10 flex-shrink max-w-4xl">
+      <div className="bg-white p-10 flex-shrink max-w-4xl ">
         <h1 className="text-6xl font-bold pb-3">
           Thank you!
         </h1>
+        <div className="wrapper ">
+        <img src="./web-digger-form.png" className="absolute top-3 right-1" alt="web-diggers" style={{width: "400px", height: "auto"}}/>
+
         <h2 className="text-2xl pb-4">
           This page was crafted during the Basel Hack 2023. Using Rust and React, we've used new technologies to bring you history to life.
           <br/>
@@ -37,6 +40,7 @@ export function SeeYou() {
           &nbsp;
           <a className="font-bold" href="https://benjaminsteidl.com/">Benjamin Steidl</a>
         </p>
+        </div>
       </div>
     </div>
   );
