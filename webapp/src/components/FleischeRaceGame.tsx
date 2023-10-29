@@ -8,7 +8,7 @@ export function FleischeRaceGame() {
       }}
     >
       <div
-        className="container mx-auto pt-12"
+        className="container mx-auto mt-12"
         style={{
           maxWidth: "66rem",
         }}

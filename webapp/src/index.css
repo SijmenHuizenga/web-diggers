@@ -66,7 +66,7 @@ img.startmeup {
     margin-left: -120px;
     margin-top: 50px;
 }
-    
+
 .description {
     margin: 0 20%;
     padding: 0.8em 1em;
@@ -77,8 +77,8 @@ img.startmeup {
     overflow-y: auto;
 }
 
-iframe {
-    width: 640px; 
-    height: 500px; 
+.artIframe {
+    width: 640px;
+    height: 500px;
     margin-top: -300px;
 }
