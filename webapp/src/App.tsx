@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import Room from "./templates/Room";
-import { Piece } from "./apiclient/model";
+import { useDraggable } from "react-use-draggable-scroll";
 import { loadData } from "./apiclient/apiclient";
+import { Piece } from "./apiclient/model";
 import { ComputerUpgradesPage } from "./components/ComputerUpgrades";
 import { FleischeRaceGame } from "./components/FleischeRaceGame";
-import { useDraggable } from "react-use-draggable-scroll";
 import { HelveticaPage } from "./components/HelveticaPage";
+import MusicPage from './components/MusicPage';
+import Room from "./templates/Room";
 
 function App() {
   const ref =
@@ -32,6 +33,8 @@ function App() {
           return <FleischeRaceGame />;
         } else if (piece.name === "Helvetica") {
           return <HelveticaPage />;
+        } else if (piece.name === "Sie Lügt") {
+          return <MusicPage />;
         } else {
           return <Room key={piece.id} piece={piece} />;
         }
