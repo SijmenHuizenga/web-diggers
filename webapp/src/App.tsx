@@ -9,11 +9,6 @@ import { FleischeRaceGame } from "./components/FleischeRaceGame";
 import { HelveticaPage } from "./components/HelveticaPage";
 import MusicPage from "./components/MusicPage";
 import Room from "./templates/Room";
-<<<<<<< HEAD
-=======
-import { WelcomePage } from "./Welcome";
-import { Clippy } from "./components/Clippy";
->>>>>>> ef5d28160819cfcf233eedb0f9eac6e657358ce4
 
 function App() {
   const ref =
