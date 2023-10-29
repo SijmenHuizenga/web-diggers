@@ -89,15 +89,14 @@ img.startmeup:hover {
 img.startmeup {
     border: none;
     cursor: pointer;
-    background: rgba(255,255,200,0.4);
-    float: left;
-    width: 120px;
-    margin-left: -200px;
-    margin-top: 50px;
+    background: rgba(0,0,0,0.2);
+    width: 80px;
     border-radius: 100px;
     padding: 4px 0px;
-    text-shadow: 2px 2px 2px black;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    margin-top: -20px;
+    margin-left: 20px;
+    /*text-shadow: 2px 2px 2px black;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);*/
 }
 
 .description {

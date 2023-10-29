@@ -3,6 +3,11 @@ import { Piece } from "../apiclient/model";
 import ArtObject from "../components/ArtObject";
 import { Rope } from "../components/rope/Rope";
 
+import { ComputerUpgradesPage } from "../components/ComputerUpgrades";
+import { FleischeRaceGame } from "../components/FleischeRaceGame";
+import { HelveticaPage } from "../components/HelveticaPage";
+import MusicPage from "../components/MusicPage";
+
 export const RoomWrapper = ({
   children,
   style,
@@ -22,6 +27,15 @@ export const RoomWrapper = ({
 
 const Room = ({ piece }: { piece: Piece }) => {
   return (
+      (piece.name === "Fleisch Ski Race") ?
+        <FleischeRaceGame key={piece.id} />
+      : (piece.name === "Helvetica") ?
+        <HelveticaPage key={piece.id} />
+      : (piece.name === "Sie Lügt") ?
+        <MusicPage key={piece.id} />
+      : (piece.name === "From 486 to Pentium") ?
+        <ComputerUpgradesPage key={piece.id} />
+      : '' + 
     <RoomWrapper
       style={{
         backgroundImage: "url(/art-hall-1.jpg)",

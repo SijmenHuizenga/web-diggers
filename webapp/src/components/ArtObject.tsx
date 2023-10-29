@@ -36,22 +36,14 @@ const ArtObject = ({ piece }: { piece: Piece }) => {
         {piece.name}
       </h2>
       <div className="image-container">
-        {imagehide && (
-          <img
-            className="startmeup"
-            src="/playback.png"
-            title="Click to open"
-            onClick={() => {
-              setPlaying(true);
-            }}
-            style={{ visibility: playing ? "hidden" : "visible" }}
-          />
-        )}
         {imageurl && (
           <img
             className="width-full z-50"
             src={imageurl}
             alt="Image"
+            onClick={() => {
+              setPlaying(true);
+            }}
             style={{ visibility: playing ? "hidden" : "visible" }}
           />
         )}
@@ -66,15 +58,26 @@ const ArtObject = ({ piece }: { piece: Piece }) => {
             allowFullScreen
           ></iframe>
         )}
+        {imagehide && (
+          <img
+            className="startmeup"
+            src="/playback.png"
+            title="Click to open"
+            onClick={() => {
+              setPlaying(true);
+            }}
+            style={{ visibility: playing ? "hidden" : "visible" }}
+          />
+        )}
       </div>
       <div className="description">
         <p>{piece.context}</p>
         <p className="text-2x1 clear-both mt-2 mb-2">
           {imagehide && (
-            <a className="button zoom" href={imagehide} target="_blank">Zoom</a>
+            <a className="button zoom" href={imagehide} target="_blank">🔍 Zoom in</a>
           )}
           {piece.source && (
-            <a className="button info" href={piece.source} target="_blank">Read more ...</a>
+            <a className="button info" href={piece.source} target="_blank">👓 Read more</a>
           )}
         </p>
       </div>

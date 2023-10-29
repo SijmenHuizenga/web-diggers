@@ -22,7 +22,7 @@ export function WelcomePage({ onMuseumEnter }: { onMuseumEnter: () => void }) {
           onClick={onMuseumEnter}
           className="border bg-gray-700 hover:bg-gray-800 text-white p-7 text-2xl float-right"
         >
-          Enter the Museum
+           🎟️ Enter the Museum
         </button>
       </div>
     </div>
