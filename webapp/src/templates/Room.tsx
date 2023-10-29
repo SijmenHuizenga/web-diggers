@@ -13,7 +13,7 @@ export const RoomWrapper = ({
   return (
     <div
       style={style}
-      className="h-full maxh-full min-w-full border-black bg-auto bg-cover bg-center overflow-hidden"
+      className="h-full maxh-full min-w-full border-black bg-auto bg-cover bg-center overflow-hidden relative"
     >
       {children}
     </div>
