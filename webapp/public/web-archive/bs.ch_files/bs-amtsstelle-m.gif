@@ -1,0 +1,431 @@
+<html>
+<head>
+<base href="http://www.bs.ch/">
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Basel-Stadt: Hilfe, Suchhilfe, Search, Help</title>
+<style type="text/css">
+<!--
+A:link {
+	color: #CC6600;
+	text-decoration: none;
+}
+A:visited {
+	color: #CC6600;
+	text-decoration: none;
+}
+A:active { 
+	color: #006666;
+	text-decoration: none;
+}
+A:hover { 
+	color: #AA0000; 
+	text-decoration: none;
+}
+.b-nav, .b-nav:link, .b-nav:visited, .b-nav:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color: #333333;
+	text-decoration: none;
+}
+.b-nav-a,  .b-nav-a:link, .b-nav-a:visited, .b-nav-a:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color: #000000;
+	text-decoration: none;
+}
+.c-nav, .c-nav:link, .c-nav:visited, .c-nav:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 13px;
+	color: #000000;
+	text-decoration: none;
+}
+.c-nav-a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 13px;
+	color: #000000;
+	text-decoration: none;
+}
+.m-nav, .m-nav:link, .m-nav:visited, .m-nav:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color: #666666;
+	text-decoration: none;
+}
+.c-nav:hover { 
+	color: #663333;
+	text-decoration: none;
+}
+.b-nav:hover { 
+	color: #CC3300;
+	text-decoration: none;
+}
+.m-nav:hover, .b-nav-a:hover { 
+	color: #333333;
+	text-decoration: none;
+}
+.a-nav, .a-nav:link, .a-nav:visited, .a-nav:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color: #993300;
+	text-decoration: none;
+}
+.a-nav:hover { 
+	color: #CC3300;
+	text-decoration: none;
+}
+.t-nav, .t-nav:link, .t-nav:visited, .t-nav:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color: #CC6600;
+	text-decoration: none;
+}
+.t-nav:hover { 
+	color: #993300;
+	text-decoration: none;
+}
+.t-titel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 17px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.titel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 26px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.untertitel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 18px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.fliess, td, li {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 17px;
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.fliess-hell {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 17px;
+	font-style: normal;
+	color: #666666;
+	text-decoration: none;
+}
+.guichet {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+}
+#AZ {
+	color: #ffffff;
+	letter-spacing:1px;
+	padding-left:7px;
+
+}
+.Initiale {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #000000;
+	letter-spacing: none;
+	font-weight: bold;
+	text-decoration: none;
+}
+.fliessFarbe {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 17px;
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.fliesstitel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 24px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.spaltentitel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 17px;
+	color: #8C8C8C;
+	text-decoration: none;
+	font-weight: bold;
+}
+.fliess-adresse {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	font-style: normal;
+	color: #333333;
+	text-decoration: none;
+}
+.halberAbstand {
+	font-size: 6px;
+	line-height: 6px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#mainmenu {
+background-image: url(bg-muenster.gif);
+background-repeat: no-repeat;
+}
+
+
+
+@media print
+@page { size: landscape;}
+// -->
+</style>
+<SCRIPT type="text/javascript" language="JavaScript"> <!--
+        browserName = navigator.appName;
+        browserVer = parseInt(navigator.appVersion);
+        if (browserName == "Netscape" && browserVer >= 3) version = "n3";
+        else version = "n2";
+
+function pop(myurl){
+         focusWindow = window.open(myurl,'_blank','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=no,left=50,top=50,width=710,height=530');
+         if (version=="n3") focusWindow.focus();
+        }
+
+function popDS(myurl){
+         focusWindow = window.open(myurl,'_blank','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,copyhistory=no,left=95,top=255,width=370,height=215');
+         if (version=="n3") focusWindow.focus();
+        }
+        
+//
+function resetFocus() {
+  document.sample.reset();
+  document.sample.data.focus();
+}
+
+//
+function search(myurl){
+         formObj = document.sample;
+         var data = formObj.data.value;
+         if(data.search(/ä/ != -1)){
+         data = data.replace(/ä/g,"ae");}
+         if(data.search(/ö/ != -1)){
+         data = data.replace(/ö/g,"oe");}
+         if(data.search(/ü/ != -1)){
+         data = data.replace(/ü/g,"ue");}
+         url = myurl+data;
+         focusWindow = window.open(url,'_top');
+         if (version=="n3") focusWindow.focus();
+        }
+//
+function blow(myurl){
+         focusWindow = window.open(myurl,'_blank','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=no,left=50,top=50,width=900,height=730');
+         if (version=="n3") focusWindow.focus();
+        }
+// -->
+</SCRIPT>
+
+</head>
+<a name="top"></a>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" scroll="auto">
+<table border="0" cellpadding="0" cellspacing="0" height="100%">
+<tr bgcolor="#F4F4F4"><td valign="top" height="60"><table id="mainmenu" width="900" height="60" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top" height="45"> 
+    <td width="2"><a href="index.htm#Text"><img src="blind.gif" alt="zum Text" width="2" height="45" border="0"></a></td>
+    <td width="133"><a href="http://www.bs.ch" target="_top"><img src="logo_baselstadt.gif" width="133" height="45" alt="Logo: Baselstab / Basel-Stadt" border="0" title="Logo: Baselstab / Basel-Stadt"></a></td>
+    <td width="446"></td>
+    <td width="45"></td>
+    <td width="274"><img src="spacer.gif" width=274 height=1></td>
+  </tr>
+  <tr height="15"><td valign="top" colspan="5"><table width="900" height="15" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="703" align="left" valign="bottom">
+
+<table height="15" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="29" valign="bottom"><img src="spacer.gif" alt="Navigation Hauptkapitel" width="1" height="15"><img src="spacer.gif" width="28" height="15"></td>
+
+		<td width="14" valign="bottom"><img src="nav_activ_left.gif" width="15" height="15" alt="/" border="0"></td>
+		<td bgcolor="#E59276"><a href="" class="b-nav-a">Beh&ouml;rden<br></a></td>
+		<td width="14" valign="bottom"><img src="nav_activ_right_weiss.gif" width="15" height="15" border="0"></td>
+		
+	
+		
+		<td bgcolor="#FFFFFF"><a href="http://www.basel.ch" target="_blank" class="b-nav">Kultur und Wirtschaft</a></td>
+		
+	
+		<td width="15" valign="bottom"><img src="nav_stroke-weiss.gif" width="15" height="15" alt="/" border="0"></td>
+		<td bgcolor="#FFFFFF"><a href="http://www.baseltourismus.ch" target="_blank" class="b-nav">Tourismus</a></td>
+		
+	
+		<td width="15" valign="bottom"><img src="nav_end.gif" width="15" height="15" alt="/" border="0"></td>
+		<td width="52" valign="bottom"><img src="spacer.gif" alt="/" width="1" height="15"></td>
+		<td valign="bottom"><img src="spacer.gif" width="30" height="1"></td>
+	</tr>
+</table>
+</td>
+    <td width="197" align="right" valign="bottom"><table align="right" height="15" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="15"><img src="spacer.gif" width=1 height=15 alt="Metanavigation"></td> 
+          <td><a href="javascript:pop('http://search.bs.ch/cgi-bin/query?mss=bs');" class="m-nav">Suche</a></td>
+          <td><img src="metanav_stroke.gif" width="13" height="15" alt="/" border="0"></td>
+          <td><a href="javascript:pop('kontakt.htm');" class="m-nav">Kontakt</a></td>
+          <td><img src="spacer.gif" width=43 height=1></td>
+        </tr>
+      </table></td>
+  </tr>
+</table></td></tr>
+</table>
+</td></tr>
+<tr><td valign="top" height="*"><table width="900" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" height="64"><table bgcolor="#E59276" width="900" height="64" border="0" cellpadding="0" cellspacing="0">
+  <tr height="64"> 
+    <td width="169" valign="top"><a href="bs.htm" target="_top"><img src="slice-oben.jpg" width="169" height="64" alt="Rathaus: Portal Home" border="0" title="Rathaus: Portal Home"></a></td><td width="1"></td><td width="16"></td><td width="714" class="titel">Tipps zum schnellen und einfachen Finden<br>
+</td>
+  </tr>
+</table></td></tr>
+
+<tr><td valign="top" height="*"><table height="100%" width="900" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="169" align="left" valign="top" bgcolor="#F4F4F4"><table width="169" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+		<td colspan=3 valign="top"><a href="bs.htm" target="_top"><img src="slice-unten.jpg" width="169" height="42" alt="Rathaus: Portal Home" border="0" title="Rathaus: Portal Home"></a></td>
+	</tr>
+	<tr> 
+		<td colspan=3 valign="top"><body onload="resetFocus()">
+<table width="169" height="54" border="0" cellspacing="0" cellpadding="0" bgcolor="#F8D6C3">
+	<tr><td valign="top" colspan=2 bgcolor="#FFFFFF"><img src="spacer.gif" width=1 height=1></td></tr>
+	<tr><td valign="top" colspan=2><img src="spacer.gif" width="1" height="4"></td></tr>
+	<tr><td valign="top" rowspan=2 height="34"><img src="spacer.gif" width="14" height="1"></td>
+		<td valign="top" </STY><span class="fliess-adresse">Direktsuche (<a href="javascript:popDS('direktsuche-hilfe.htm')">?</a>):<td></tr>
+	<tr>
+<form name="sample" action="javascript:search('http://www.bs.ch/')">
+<td nowrap valign="top"><input type="text" name="data" size="15" class="c-nav" style="color:black;" maxlength="800">
+<input type="image" src="ok-button.gif" alt="Suchen" border="0"></td>
+</form>
+	</tr>
+	<tr><td valign="top" colspan=2><img src="spacer.gif" width=1 height=14></td></tr>
+	<tr><td valign="top" colspan=2 bgcolor="#FFFFFF"><img src="spacer.gif" width=1 height=1></td></tr>
+</table></span></td>
+	</tr>
+    <tr>
+    	<td colspan=3 valign="top"></td>
+</tr>
+    <tr> 
+<td width=14><img src="spacer.gif" width="2" height="1" hspace="6" vspace="50"></td>
+<td width=143 height="100%"><img src="spacer.gif" width="1" height="1" vspace="11"><br><span class="fliess-adresse"><br>
+</span><br></td>
+<td width=12><img src="spacer.gif" width="1" height="1"></td>
+</tr>
+</table></td>
+    <td width="1" align="left" valign="top" bgcolor="#A3A3A3"><img src="1px-weiss.gif" width="1" height="1" border="0"><img src="spacer.gif" width="1" height="20"></td>
+    <td width="730" align="left" valign="top"><!-- content --><table width="730" border="0" cellpadding="0" cellspacing="0" bgcolor="#ECECEC" height="100%">
+<tr height="24"><td valign="top" colspan="7"><img src="spacer.gif" height="2" width="1" vspace="11"></td></tr>
+<tr>
+	<td width="16"></td>
+	<td width="671" valign="top"><table width="525" border="0" cellpadding="0" cellspacing="0">
+				<tr><td valign="top"><a name="Text"></a><br>
+<b>Bitte beachten Sie</b>, dass die Direktsuche folgende Bedingungen erf&uuml;llt:<br>
+<span class="halberAbstand"><br>
+</span>&raquo; nur ein Wort<br>
+&raquo; keine Zahlen.<br>
+<br>
+<b>Weitere wichtige Fundstellen</b>:<br>
+<span class="halberAbstand"><br>
+</span>&raquo; <a href="http://www.staatskalender.bs.ch">Staatskalender</a> (Personen und Dienststellen)<br>
+&raquo; <a href="http://www.gesetzessammlung.bs.ch">Gesetzessammlung</a> (Kanton und Gemeinden)<br>
+&raquo; <a href="http://www.geo.bs.ch/stadtplan">Stadtplan</a> (mit Zusatzinformationen)<br>
+&raquo; <a href="http://pages.unibas.ch/cgi-bin/mmbs-search">Medienmitteilungen</a><br>
+&raquo; <a href="http://www.grosserrat-bs.ch/suche_geschaefte/">Gesch&auml;fte des Grossen Rates</a><br>
+&raquo; <a href="">Index A-Z</a><br>
+&raquo; <a href="register.htm">weitere Register</a><br>
+<br>
+<b>Recherchen</b>: F&uuml;r die erweiterte Suche steht Ihnen auch die<br>
+&raquo; <a href="javascript:pop('http://search.bs.ch/cgi-bin/query?mss=bs&pg=aq');">Suchmaschine</a> zur Verf&uuml;gung.<br>
+<br>
+<b>Hilfe</b>:<br>
+<span class="halberAbstand"><br>
+</span>&raquo; <a href="javascript:pop('kontakt.htm');">Kontaktformular</a><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</td></tr>
+				</table></td>
+	<td width="27"><img src="spacer.gif" height="1" width="1" hspace="13"></td>
+</tr>
+</table><!-- content END --></td>
+  </tr>
+</table></td></tr>
+
+<tr valign="bottom"><td height="25"><table width="900" height="25" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="169" valign="bottom" bgcolor="#F4F4F4"></td>
+		<td width="1" valign="top" bgcolor="#A3A3A3"></td>
+		<td width="730" valign="bottom" bgcolor="#ECECEC"></td>
+    </tr>
+</table></td></tr>
+
+    
+</table>
+</td></tr>
+</table>
+</body>
+
+
+
+</html>

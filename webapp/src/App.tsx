@@ -30,13 +30,13 @@ function App() {
     >
       {pieces.map((piece) => {
         if (piece.name === "Fleisch Ski Race") {
-          return <FleischeRaceGame />;
+          return <FleischeRaceGame key={piece.id} />;
         } else if (piece.name === "Helvetica") {
-          return <HelveticaPage />;
+          return <HelveticaPage key={piece.id} />;
         } else if (piece.name === "Sie Lügt") {
-          return <MusicPage />;
+          return <MusicPage key={piece.id} />;
         } else if (piece.name === "From 486 to Pentium") {
-          return <ComputerUpgradesPage />;
+          return <ComputerUpgradesPage key={piece.id} />;
         } else {
           return <Room key={piece.id} piece={piece} />;
         }

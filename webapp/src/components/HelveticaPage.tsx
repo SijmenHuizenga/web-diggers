@@ -132,6 +132,7 @@ export function HelveticaPage() {
       <div ref={parent} className="h-full w-full">
         {[...Array(NR_OF_BOXES).keys()].map((a, i) => (
           <div
+            key={i}
             ref={refs[i]}
             className="absolute"
             style={{
