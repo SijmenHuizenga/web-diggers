@@ -20,12 +20,9 @@ const MusicPage = () => {
           maxWidth: "66rem",
         }}
       >
-        <div className="absolute top-10">
+        <div className="absolute top-14">
           <h1 className="text-7xl font-semibold uppercase font-title p-3 pb-0 text-white">
             Musik Hits 2000
-          </h1>
-          <h1 className="text-3xl mb-4 p-3 pt-0 text-white">
-            Player
           </h1>
         </div>
         <div className="absolute bottom-9">
