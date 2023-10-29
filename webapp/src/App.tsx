@@ -7,20 +7,26 @@ import { FleischeRaceGame } from "./components/FleischeRaceGame";
 import { HelveticaPage } from "./components/HelveticaPage";
 import MusicPage from "./components/MusicPage";
 import Room from "./templates/Room";
+import { WelcomePage } from "./Welcome";
 
 function App() {
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
-  const { events } = useDraggable(ref);
 
+  const [onWelcomePage, setOnWelcomePage] = useState<boolean>(true);
   const [pieces, setPieces] = useState<Piece[]>([]);
+
+  const { events } = useDraggable(ref, {
+    isMounted: !onWelcomePage,
+  });
+
   useEffect(() => {
     loadData().then(setPieces);
   }, []);
 
-  // if (welcome) {
-  //   return welcome;
-  // }
+  if (onWelcomePage) {
+    return <WelcomePage onMuseumEnter={() => setOnWelcomePage(false)} />;
+  }
 
   return (
     <div
