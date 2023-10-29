@@ -11,26 +11,31 @@ export function SeeYou() {
     >
       <div className="bg-white p-10 flex-shrink max-w-4xl ">
         <h1 className="text-6xl font-bold pb-3">
-          Thank you!
+          Thank you for digging in!
         </h1>
         <div className="wrapper ">
         <img src="./web-digger-form.png" className="absolute top-3 right-1" alt="web-diggers" style={{width: "400px", height: "auto"}}/>
 
         <h2 className="text-2xl pb-4">
-          This page was crafted during the Basel Hack 2023. Using Rust and React, we've used new technologies to bring you history to life.
+          This page was crafted during <a href="https://baselhack.ch" target="_blank">BaselHack 2023</a>. 
+          Using Rust and React, we have used new technologies to bring you history to life. 
+          To explore the code behind this project and join us on our journey, check out the repository on 
+          <a className="font-bold" href="https://github.com/SijmenHuizenga/web-diggers">GitHub</a>.
           <br/>
           <br/>
-          If you'd like to explore the code behind this project and join us on our journey, you can find the entire repository on <a className="font-bold" href="https://github.com/SijmenHuizenga/web-diggers">GitHub</a>
-          <br/>
-          <br/>
-          Feel free to dive into the code, contribute, or simply share your thoughts with us. We're excited to see where this project can go, and we hope it inspires you as much as it has inspired us.
+          Feel free to dive into the code, contribute, or simply share your thoughts with us. 
+          We are excited to see where this project can go, and hope that Basel inspires you too!
         </h2>
         <br />
-        <p>Inspiered by &nbsp;
-          <a className="font-bold" href="https://neal.fun/internet-artifacts/" >Neil</a>
+        <p>Motivated by:
+        <ul>
+          <li><a className="font-bold" target="_blank" href="https://neal.fun/internet-artifacts/">Neal.fun</a></li>
+          <li><a className="font-bold" target="_blank" href="https://grabmacherjoggi.ch">Grabmacher Joggi</a></li>
+          <li><a className="font-bold" target="_blank" href="https://share.hek.ch/de/gestalten-mit-screenshots/">Gestalten mit Screenshots</a></li>
+        </ul>
         </p>
         <p>
-          created by Web Diggers:
+          Created by the Web Diggers:
           <br />
           <a className="font-bold" href="https://blog.datalets.ch/author/oleg/">Oleg Lavrovsky</a>,
           &nbsp;

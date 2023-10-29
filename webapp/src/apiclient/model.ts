@@ -4,6 +4,7 @@ export type Piece = {
   context: string;
   year: number;
   hide: boolean;
+  source: string;
   screenshot: string;
   embed: string;
   "type of embed": "IMAGE" | "IFRAME" | "VIDEO" | "MUSIC" | "";
