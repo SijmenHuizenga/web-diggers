@@ -5,7 +5,7 @@ import { Piece } from "./apiclient/model";
 import { ComputerUpgradesPage } from "./components/ComputerUpgrades";
 import { FleischeRaceGame } from "./components/FleischeRaceGame";
 import { HelveticaPage } from "./components/HelveticaPage";
-import MusicPage from './components/MusicPage';
+import MusicPage from "./components/MusicPage";
 import Room from "./templates/Room";
 
 function App() {
@@ -35,11 +35,12 @@ function App() {
           return <HelveticaPage />;
         } else if (piece.name === "Sie Lügt") {
           return <MusicPage />;
+        } else if (piece.name === "From 486 to Pentium") {
+          return <ComputerUpgradesPage />;
         } else {
           return <Room key={piece.id} piece={piece} />;
         }
       })}
-      <ComputerUpgradesPage />
     </div>
   );
 }

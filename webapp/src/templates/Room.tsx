@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, RefObject } from "react";
 import { Piece } from "../apiclient/model";
 import ArtObject from "../components/ArtObject";
 import { Rope } from "../components/rope/Rope";
