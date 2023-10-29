@@ -49,7 +49,6 @@ class Bounds {
   }
 
   fit(
-    strategy: "random" | "smarter",
     areaToFit: Bounds,
     fitted: Bounds[],
     randUint: (range: number) => number
@@ -85,12 +84,10 @@ function moveRandomly(
   const fitted: Bounds[] = doNotOverlap.map((el) => new Bounds(el));
   const areaToFit = new Bounds(parent);
 
-  let fitStrategy: "random" | "smarter" = "random";
-
   outer: for (let el of elements) {
     while (getFontSizeFromEl(el) > MIN_SIZE) {
       const box = new Bounds(el);
-      if (box.fit(fitStrategy, areaToFit, fitted, randUint)) {
+      if (box.fit(areaToFit, fitted, randUint)) {
         box.placeElement();
         fitted.push(box);
         continue outer;
@@ -130,7 +127,7 @@ export function HelveticaPage() {
       }}
     >
       <div ref={parent} className="h-full w-full">
-        {[...Array(NR_OF_BOXES).keys()].map((a, i) => (
+        {[...Array(NR_OF_BOXES).keys()].map((_, i) => (
           <div
             key={i}
             ref={refs[i]}
