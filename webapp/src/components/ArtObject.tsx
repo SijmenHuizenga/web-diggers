@@ -8,8 +8,9 @@ const ArtObject = ({ piece }: { piece: Piece }) => {
   const [playing, setPlaying] = useState(false);
 
   const onMuseumExit = () => {
-    let w = document.getElementById('root').children[0]
-    w.scrollTo(w.scrollWidth, 0)
+    const r = document.getElementById('root')
+    const w = r ? r.children[0] : null
+    if (w !== null) w.scrollTo(w.scrollWidth, 0)
   }
 
   // Get a screenshot or image link

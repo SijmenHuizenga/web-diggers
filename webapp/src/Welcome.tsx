@@ -20,7 +20,7 @@ export function WelcomePage(
           stored our data, and Y2K was the talk of the town. Press
           ENTER when ready!
         </h2>
-        <center>
+        <center className="m-8">
           <button
             onClick={onMuseumEnter}
             className="border bg-gray-500 hover:bg-gray-600 text-white p-7 text-2xl"

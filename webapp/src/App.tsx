@@ -24,7 +24,9 @@ function App() {
 
   const startShow = () => {
     setOnWelcomePage(false)
-    document.getElementById('root').children[0].scrollTo(0,0)
+    const r = document.getElementById('root')
+    const w = r ? r.children[0] : null
+    if (w !== null) w.scrollTo(0,0)
   }
 
   useEffect(() => {
