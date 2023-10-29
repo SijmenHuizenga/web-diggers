@@ -14,27 +14,27 @@ export function SeeYou() {
           Thank you for digging in!
         </h1>
         <div className="wrapper ">
-        <img src="./web-digger-form.png" className="absolute top-3 right-1" alt="web-diggers" style={{width: "400px", height: "auto"}}/>
+        <img src="./web-digger-form.png" className="absolute top-3 right-1" alt="web-diggers" style={{width: "10%", height: "auto"}}/>
 
         <h2 className="text-2xl pb-4">
           This page was crafted during <a href="https://baselhack.ch" target="_blank">BaselHack 2023</a>. 
           Using Rust and React, we have used new technologies to bring you history to life. 
           To explore the code behind this project and join us on our journey, check out the repository on 
-          <a className="font-bold" href="https://github.com/SijmenHuizenga/web-diggers">GitHub</a>.
+          &nbsp;<a className="font-bold" href="https://github.com/SijmenHuizenga/web-diggers">GitHub</a>.
           <br/>
           <br/>
           Feel free to dive into the code, contribute, or simply share your thoughts with us. 
           We are excited to see where this project can go, and hope that Basel inspires you too!
         </h2>
         <br />
-        <p>Motivated by:
-        <ul>
-          <li><a className="font-bold" target="_blank" href="https://neal.fun/internet-artifacts/">Neal.fun</a></li>
-          <li><a className="font-bold" target="_blank" href="https://grabmacherjoggi.ch">Grabmacher Joggi</a></li>
-          <li><a className="font-bold" target="_blank" href="https://share.hek.ch/de/gestalten-mit-screenshots/">Gestalten mit Screenshots</a></li>
-        </ul>
-        </p>
         <p>
+          Motivated by: &nbsp;
+          <a className="font-bold" target="_blank" href="https://neal.fun/internet-artifacts/">Neal.fun</a>  
+          , <a className="font-bold" target="_blank" href="https://grabmacherjoggi.ch">Grabmacher Joggi</a>
+          , <a className="font-bold" target="_blank" href="https://share.hek.ch/de/gestalten-mit-screenshots/">Gestalten mit Screenshots</a>, 
+          and you!
+        </p>
+        <p><br />
           Created by the Web Diggers:
           <br />
           <a className="font-bold" href="https://blog.datalets.ch/author/oleg/">Oleg Lavrovsky</a>,

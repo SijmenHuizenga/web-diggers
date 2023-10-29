@@ -17,3 +17,4 @@ refresh:
 	@echo "Updating and converting data"
 	@( which mlr ) || ( echo "Please install miller before continuing" && exit 1 );
 	@mlr --icsv --from $(DATA_FILE).csv   --c2j --jlistwrap then case -l -k then cat > $(DATA_FILE).json
+	@cp -f $(DATA_FILE).json webapp/public/$(DATA_FILE).json
