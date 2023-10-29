@@ -13,7 +13,7 @@ export const RoomWrapper = ({
   return (
     <div
       style={style}
-      className="h-full maxh-full min-w-full border-black bg-auto bg-cover bg-center overflow-hidden relative"
+      className="h-full maxh-full min-w-full border-black bg-auto bg-cover bg-center overflow-hidden"
     >
       {children}
     </div>
@@ -24,7 +24,7 @@ const Room = ({ piece }: { piece: Piece }) => {
   return (
     <RoomWrapper
       style={{
-        backgroundImage: "url(/art-hall-1.png)",
+        backgroundImage: "url(/art-hall-1.jpg)",
       }}
     >
       <ArtObject piece={piece} />
