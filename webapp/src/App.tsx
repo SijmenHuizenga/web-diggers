@@ -8,6 +8,7 @@ import { HelveticaPage } from "./components/HelveticaPage";
 import MusicPage from "./components/MusicPage";
 import Room from "./templates/Room";
 import { WelcomePage } from "./Welcome";
+import { Clippy } from "./components/Clippy";
 
 function App() {
   const ref =
@@ -47,6 +48,7 @@ function App() {
           return <Room key={piece.id} piece={piece} />;
         }
       })}
+      <Clippy />
     </div>
   );
 }
