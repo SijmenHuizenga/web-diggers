@@ -4,6 +4,7 @@ import SeeYou from './SeeYou';
 import { WelcomePage } from "./Welcome";
 import { loadData } from "./apiclient/apiclient";
 import { Piece } from "./apiclient/model";
+import { Clippy } from "./components/Clippy";
 import { ComputerUpgradesPage } from "./components/ComputerUpgrades";
 import { FleischeRaceGame } from "./components/FleischeRaceGame";
 import { HelveticaPage } from "./components/HelveticaPage";
@@ -49,6 +50,7 @@ function App() {
         }
       })}
       <SeeYou />
+      <Clippy />
     </div>
   );
 }
