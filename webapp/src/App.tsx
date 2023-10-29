@@ -51,7 +51,7 @@ function App() {
         }
       })}
       <SeeYou />
-      <Clippy />
+      {/*<Clippy />*/}
     </div>
   );
 }

@@ -32,6 +32,13 @@ function Cloppy({ close }: { close: () => void }) {
       );
     }, 2000);
   };
+  const begone = () => {
+    setText("Clippy says: Thinking...");
+    setTimeout(() => {
+      // TODO: hide clippy completely!
+      // this could also be a text command ..
+    }, 1000);
+  };
   return (
     <div
       className="absolute px-10 py-5 z-10 cursor-pointer bg-yellow-600 border-yellow-800"
@@ -62,6 +69,12 @@ function Cloppy({ close }: { close: () => void }) {
         onClick={send}
       >
         Send
+      </button>
+      <button
+        className="bg-yellow-700 text-white px-3 py-1 mt-2"
+        onClick={begone}
+      >
+        Tschüss
       </button>
       <p className="text-xl p-3">{text}</p>
     </div>
