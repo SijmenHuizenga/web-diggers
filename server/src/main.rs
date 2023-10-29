@@ -2,9 +2,8 @@ use actix_cors::Cors;
 use actix_web::{get, http, middleware, App, HttpResponse, HttpServer, Responder};
 use serde_json::Value;
 use std::env::current_dir;
-use std::fs::File;
+use std::fs::{read_to_string, File};
 use std::path::PathBuf;
-use csv::Reader;
 
 #[get("/")]
 async fn get_root() -> impl Responder {
@@ -28,15 +27,11 @@ async fn get_json() -> impl Responder {
 #[get("/csv")]
 async fn get_csv() -> impl Responder {
     let file_path = get_data_file_path("web-diggers-alpha.csv");
-    let mut reader = Reader::from_path(file_path).expect("Failed to read CSV file");
+    let file = read_to_string(file_path).expect("Failed to read CSV file");
 
-    for string_record in reader.records() {
-        let record = string_record.expect("Failed to read CSV file");
-        println!("Record {:?}", record);
-    }
-
-    HttpResponse::Ok().body("CSV TEST")
-    // HttpResponse::Ok().body(reader.records().collect::<Vec<_>>().as_slice())
+    HttpResponse::Ok()
+        .append_header(http::header::ContentType(mime::TEXT_CSV))
+        .body(file)
 }
 
 #[actix_web::main]
