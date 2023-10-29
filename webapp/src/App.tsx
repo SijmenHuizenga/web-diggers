@@ -53,11 +53,7 @@ function App() {
           return <Room key={piece.id} piece={piece} />;
         }
       })}
-<<<<<<< HEAD
       <SeeYou />
-=======
-      <Clippy />
->>>>>>> ef5d28160819cfcf233eedb0f9eac6e657358ce4
     </div>
   );
 }
