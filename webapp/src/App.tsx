@@ -22,12 +22,20 @@ function App() {
     isMounted: !onWelcomePage,
   });
 
+  const startShow = () => {
+    setOnWelcomePage(false)
+    document.getElementById('root').children[0].scrollTo(0,0)
+  }
+
   useEffect(() => {
     loadData().then(setPieces);
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Enter') { startShow() }
+    })
   }, []);
 
   if (onWelcomePage) {
-    return <WelcomePage onMuseumEnter={() => setOnWelcomePage(false)} />;
+    return <WelcomePage onMuseumEnter={startShow} />;
   }
 
   return (
@@ -38,7 +46,7 @@ function App() {
     >
       {pieces.map((piece) => {
         return [
-          <Mezzanine key={piece.id} piece={piece} />,
+          <Mezzanine key={piece.name} piece={piece} />,
           <Room key={piece.id} piece={piece} />
         ];
       })}

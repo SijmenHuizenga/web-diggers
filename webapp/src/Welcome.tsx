@@ -9,21 +9,29 @@ export function WelcomePage({ onMuseumEnter }: { onMuseumEnter: () => void }) {
       }}
     >
       <div className="bg-white p-10 flex-shrink max-w-4xl">
-        <h1 className="text-6xl font-bold pb-3">
+        <h1 className="text-4xl font-bold pb-3">
           Explore historic digital Basel
         </h1>
         <h2 className="text-2xl pb-4">
-          What was the digital experience like living in Basel in 2000? Take the
+          Life in Basel was already quite digitalised in 2000. Take the
           time machine back to when dial-up connections ruled, floppy disks
-          stored our data, and Y2K was the talk of the town. Are you ready to
-          enter?
+          stored our data, and Y2K was the talk of the town. Press
+          ENTER when ready!
         </h2>
-        <button
-          onClick={onMuseumEnter}
-          className="border bg-gray-700 hover:bg-gray-800 text-white p-7 text-2xl float-right"
-        >
-           🎟️ Enter the Museum
-        </button>
+        <center>
+          <button
+            onClick={onMuseumEnter}
+            className="border bg-gray-500 hover:bg-gray-600 text-white p-7 text-2xl"
+          >
+             🎟️ Enter the Museum
+          </button>
+          <a
+            href="https://baserow.schoolofdata.ch/form/pN2aVkAwBPcJb_ledBvLOWX7ueNDvWBCFlHLtV4gzrU"
+            className="border p-7 text-2xl"
+          >
+             🗣️ Share a memory
+          </a>
+        </center>
       </div>
     </div>
   );

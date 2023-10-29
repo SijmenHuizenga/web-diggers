@@ -21,7 +21,7 @@ export function ComputerUpgradesPage() {
           className="text-7xl font-semibold uppercase font-title p-3 pb-0 text-white"
           style={{ backgroundColor: "#22094D" }}
         >
-          In 2000, people in Bern...
+          In 2000, people in Basel...
         </h1>
         <h1
           className="text-3xl mb-4 p-3 pt-0 text-white"

@@ -17,13 +17,11 @@ export function SeeYou() {
         <img src="./web-digger-form.png" className="absolute top-3 right-1" alt="web-diggers" style={{width: "10%", height: "auto"}}/>
 
         <h2 className="text-2xl pb-4">
-          This page was crafted during <a href="https://baselhack.ch" target="_blank">BaselHack 2023</a>. 
-          Using Rust and React, we have used new technologies to bring you history to life. 
-          To explore the code behind this project and join us on our journey, check out the repository on 
-          &nbsp;<a className="font-bold" href="https://github.com/SijmenHuizenga/web-diggers">GitHub</a>.
-          <br/>
-          <br/>
-          Feel free to dive into the code, contribute, or simply share your thoughts with us. 
+          Feel free to explore the open source code on 
+          &nbsp;<a className="font-bold" href="https://github.com/SijmenHuizenga/web-diggers">GitHub</a>,
+          contribute memories using our
+          &nbsp;<a className="font-bold" href="https://baserow.schoolofdata.ch/form/pN2aVkAwBPcJb_ledBvLOWX7ueNDvWBCFlHLtV4gzrU">Baserow form</a>,
+          or simply share your thoughts and suggestions with us in the Issues. 
           We are excited to see where this project can go, and hope that Basel inspires you too!
         </h2>
         <br />
@@ -31,11 +29,13 @@ export function SeeYou() {
           Motivated by: &nbsp;
           <a className="font-bold" target="_blank" href="https://neal.fun/internet-artifacts/">Neal.fun</a>  
           , <a className="font-bold" target="_blank" href="https://grabmacherjoggi.ch">Grabmacher Joggi</a>
+          , <a className="font-bold" target="_blank" href="https://github.com/ruffle-rs/ruffle">Ruffle.rs</a>
           , <a className="font-bold" target="_blank" href="https://share.hek.ch/de/gestalten-mit-screenshots/">Gestalten mit Screenshots</a>, 
           and you!
         </p>
         <p><br />
-          Created by the Web Diggers:
+          Crafted during <a href="https://baselhack.ch" target="_blank">BaselHack 2023</a> 
+          &nbsp;(using Rust and React) by the Web Diggers:
           <br />
           <a className="font-bold" href="https://blog.datalets.ch/author/oleg/">Oleg Lavrovsky</a>,
           &nbsp;
@@ -45,6 +45,7 @@ export function SeeYou() {
           &nbsp;
           <a className="font-bold" href="https://benjaminsteidl.com/">Benjamin Steidl</a>
         </p>
+        <p><br/><tt>PRESS ENTER TO RESTART</tt></p>
         </div>
       </div>
     </div>
