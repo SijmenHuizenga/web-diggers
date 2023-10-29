@@ -1,5 +1,4 @@
-import { RoomWrapper } from '../templates/Room';
-
+import { RoomWrapper } from "../templates/Room";
 
 const MusicPage = () => {
   return (
@@ -24,6 +23,7 @@ const MusicPage = () => {
           <h1 className="text-7xl font-semibold uppercase font-title p-3 pb-0 text-white">
             Musik Hits 2000
           </h1>
+          <h3 className="text-white ml-3">Gölä Sie Lügt</h3>
         </div>
         <div className="absolute bottom-9">
           <audio controls>
